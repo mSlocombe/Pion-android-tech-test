@@ -34,13 +34,13 @@ Navigation: Upon successful validation, navigate to the Photos Screen.
 
 2. Photos Screen
 
-API Source: Display data from https://jsonplaceholder.typicode.com/photos
+API Source: Display data from https://dummyjson.com/products?select=id,title,thumbnail
 
 List Implementation: Use a Lazy Column or Lazy Vertical Grid in Compose to display the data efficiently.
 
 Item Display: Each item must clearly show:
 
-- The image from the thumbnailUrl. Use a dedicated Compose image loading library (like Coil or Glide/Accompanist) for this.
+- The image from the thumbnail. Use a dedicated Compose image loading library (like Coil or Glide/Accompanist) for this.
 
 - The title.
 
