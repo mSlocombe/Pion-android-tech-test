@@ -6,7 +6,9 @@ import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
 import io.ktor.http.HttpStatusCode
 import jakarta.inject.Inject
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.withContext
 
 class ProductClient @Inject constructor() {
@@ -17,11 +19,18 @@ class ProductClient @Inject constructor() {
     private val client = HttpClient()
 
     suspend fun requestProducts(): String? = withContext(Dispatchers.IO) {
-        val response = client.get("https://dummyjson.com/products?select=id,title,thumbnail")
-        if (response.status == HttpStatusCode.OK) {
-            response.bodyAsText()
-        } else {
-            Log.e(TAG, "requestProducts failed: $response")
+        try {
+            val response = client.get("https://dummyjson.com/products?select=id,title,thumbnail")
+            if (response.status == HttpStatusCode.OK) {
+                response.bodyAsText()
+            } else {
+                Log.e(TAG, "requestProducts failed: $response")
+                null
+            }
+        } catch(e: Throwable) {
+            Log.e(TAG, "requestProducts: exception $e", e)
+            if(e is CancellationException) ensureActive()
+
             null
         }
     }
