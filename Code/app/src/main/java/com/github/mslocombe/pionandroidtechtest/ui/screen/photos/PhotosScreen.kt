@@ -55,14 +55,6 @@ fun PhotosScreen(
                             .padding(horizontal = 24.dp)
                     )
                 }
-                OutlinedTextFieldThemed(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 28.dp),
-                    label = stringResource(R.string.search),
-                    value = searchField,
-                    onValueChange = viewModel::updateSearch
-                )
             }
         },
         content = { scaffoldPadding ->
@@ -97,7 +89,21 @@ fun PhotosScreen(
                         }
 
                         is PhotosScreenState.Ready -> {
-                            ReadyContent(currentState.cards)
+                            val results by viewModel.filteredCards.collectAsStateWithLifecycle()
+
+                            Column(Modifier.fillMaxSize()) {
+                                OutlinedTextFieldThemed(
+                                    modifier = Modifier
+                                        .fillMaxWidth(),
+                                    label = stringResource(R.string.search),
+                                    value = searchField,
+                                    onValueChange = viewModel::updateSearch
+                                )
+                                ReadyContent(
+                                    modifier = Modifier.weight(1f),
+                                    cards = results
+                                )
+                            }
                         }
                     }
                 }

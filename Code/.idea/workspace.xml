@@ -9,21 +9,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbfe00e1-8cd9-4344-b1ac-bc708d673b56" name="Default Changelist" comment="Photos Screen&#10;&#10;- UI adjustments for system padding&#10;&#10;- Error state manages its own retry enabled, disabling the retry button for this instance of Error (example for when component states become larger)&#10;&#10;- Photo request will only trigger if we are not already retrieving data.">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/component/OutlinedTextFieldThemed.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
+    <list default="true" id="cbfe00e1-8cd9-4344-b1ac-bc708d673b56" name="Default Changelist" comment="Photos Screen&#10;&#10;- Added search field&#10;- Added id field to Product and PhotoCardState to use as the key for the lazyColumn&#10;- Created general OutlinedTextFieldThemed.kt for use on Login and Photos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestTODOs" beforeDir="false" afterPath="$PROJECT_DIR$/TestTODOs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/network/Product.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/network/Product.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/network/ProductParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/network/ProductParser.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/login/LoginScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/login/LoginScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/GetPhotoListUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/GetPhotoListUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotoCard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotoCard.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotoCardState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotoCardState.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotosScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotosScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotosScreenState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotosScreenState.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotosViewModelImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotosViewModelImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/content/ReadyContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/content/ReadyContent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_error.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_error.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,45 +174,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
-    &quot;Android App.app2.executor&quot;: &quot;Run&quot;,
-    &quot;Android Instrumented Tests.All Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Android Instrumented Tests.PhotosScreenTest.executor&quot;: &quot;Run&quot;,
-    &quot;Android Instrumented Tests.ProductParserTest.executor&quot;: &quot;Run&quot;,
-    &quot;Android Instrumented Tests.backButtonClickable().executor&quot;: &quot;Run&quot;,
-    &quot;Android Instrumented Tests.backButtonClicked().executor&quot;: &quot;Run&quot;,
-    &quot;Android Instrumented Tests.backButtonDisplayed().executor&quot;: &quot;Run&quot;,
-    &quot;Android Instrumented Tests.loginButtonClickable().executor&quot;: &quot;Run&quot;,
-    &quot;Android Instrumented Tests.photosBackNavigatesToLogin().executor&quot;: &quot;Run&quot;,
-    &quot;Android Instrumented Tests.responseContainsManyProducts().executor&quot;: &quot;Run&quot;,
-    &quot;Android Instrumented Tests.responseContainsOneProduct().executor&quot;: &quot;Run&quot;,
-    &quot;Android Instrumented Tests.titleDisplayed().executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Configure Daemon JVM Criteria.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProductClientTest.clientReceivesResponse.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProductParserTest.responseDoesNotContainAnyProducts.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'SBTechincalTest.app.unitTest'.executor&quot;: &quot;Run&quot;,
-    &quot;GradleDaemonJvmCriteriaMigrationNotification.isNotificationDisabled&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;ResourceManagerPrefKey.ModuleName&quot;: &quot;SBTechincalTest.app.main&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sloco/AndroidStudioProjects/Pion-android-tech-test/Code&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;sml.agent.feedback.1783175006129-48a08eae-0aaa-4ca0-9b4a-c7f9563fdb31&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.app.executor": "Run",
+    "Android App.app2.executor": "Run",
+    "Android Instrumented Tests.All Tests.executor": "Run",
+    "Android Instrumented Tests.PhotosScreenTest.executor": "Run",
+    "Android Instrumented Tests.ProductParserTest.executor": "Run",
+    "Android Instrumented Tests.backButtonClickable().executor": "Run",
+    "Android Instrumented Tests.backButtonClicked().executor": "Run",
+    "Android Instrumented Tests.backButtonDisplayed().executor": "Run",
+    "Android Instrumented Tests.loginButtonClickable().executor": "Run",
+    "Android Instrumented Tests.photosBackNavigatesToLogin().executor": "Run",
+    "Android Instrumented Tests.responseContainsManyProducts().executor": "Run",
+    "Android Instrumented Tests.responseContainsOneProduct().executor": "Run",
+    "Android Instrumented Tests.titleDisplayed().executor": "Run",
+    "Gradle.Configure Daemon JVM Criteria.executor": "Run",
+    "Gradle.ProductClientTest.clientReceivesResponse.executor": "Run",
+    "Gradle.ProductParserTest.responseDoesNotContainAnyProducts.executor": "Run",
+    "Gradle.Tests in 'SBTechincalTest.app.unitTest'.executor": "Run",
+    "GradleDaemonJvmCriteriaMigrationNotification.isNotificationDisabled": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "ResourceManagerPrefKey.ModuleName": "SBTechincalTest.app.main",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sloco/AndroidStudioProjects/Pion-android-tech-test/Code",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "sml.agent.feedback.1783175006129-48a08eae-0aaa-4ca0-9b4a-c7f9563fdb31": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
       <recent name="com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content" />
@@ -729,7 +722,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783269871535</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Photos Screen&#10;&#10;- Added search field&#10;- Added id field to Product and PhotoCardState to use as the key for the lazyColumn&#10;- Created general OutlinedTextFieldThemed.kt for use on Login and Photos">
+      <option name="closed" value="true" />
+      <created>1783277960335</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1783277960335</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -784,7 +785,8 @@
     <MESSAGE value="Photos Screen&#10;&#10;- Added error logging if the product parsing fails&#10;-  Each photo card has a random coloured background&#10;-  UI cleanup to closer match the example image&#10;- ProductParser no longer catches JSONExceptions, expecting the consumer to handle errors of that kind." />
     <MESSAGE value="Photos Screen&#10;&#10;- Added exception catching to the Ktor client. If the exception was a CancellationException, we need to allow the coroutine to cancel correctly." />
     <MESSAGE value="Photos Screen&#10;&#10;- UI adjustments for system padding&#10;&#10;- Error state manages its own retry enabled, disabling the retry button for this instance of Error (example for when component states become larger)&#10;&#10;- Photo request will only trigger if we are not already retrieving data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Photos Screen&#10;&#10;- UI adjustments for system padding&#10;&#10;- Error state manages its own retry enabled, disabling the retry button for this instance of Error (example for when component states become larger)&#10;&#10;- Photo request will only trigger if we are not already retrieving data." />
+    <MESSAGE value="Photos Screen&#10;&#10;- Added search field&#10;- Added id field to Product and PhotoCardState to use as the key for the lazyColumn&#10;- Created general OutlinedTextFieldThemed.kt for use on Login and Photos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Photos Screen&#10;&#10;- Added search field&#10;- Added id field to Product and PhotoCardState to use as the key for the lazyColumn&#10;- Created general OutlinedTextFieldThemed.kt for use on Login and Photos" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">

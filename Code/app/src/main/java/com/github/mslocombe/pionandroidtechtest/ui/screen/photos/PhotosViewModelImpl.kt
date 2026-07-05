@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import jakarta.inject.Inject
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,6 +14,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.mapLatest
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -22,17 +24,15 @@ import kotlinx.coroutines.withContext
 class PhotosViewModelImpl @Inject constructor(
     private val getPhotoListUseCase: GetPhotoListUseCase
 ) : ViewModel() {
-    private val _dataState = MutableStateFlow<PhotoListResult?>(null)
+    private var currentPhotoRequest: Job? = null
 
+    private val _dataState = MutableStateFlow<PhotoListResult?>(null)
 
     private val _searchState = MutableStateFlow("")
     val searchState = _searchState.asStateFlow()
 
-    @OptIn(FlowPreview::class)
-    val uiState = combine(
-        _dataState,
-        _searchState.debounce { 300 }.distinctUntilChanged()
-    ) { data, search ->
+    @OptIn(ExperimentalCoroutinesApi::class)
+    val uiState = _dataState.mapLatest { data ->
         when (data) {
             null -> {
                 PhotosScreenState.Loading
@@ -43,14 +43,7 @@ class PhotosViewModelImpl @Inject constructor(
             }
 
             is PhotoListResult.Success -> {
-                if (search.isEmpty()) {
-                    PhotosScreenState.Ready(data.cards)
-                } else {
-                    val filteredCards = withContext(Dispatchers.Default) {
-                        data.cards.filter { it.title.lowercase().contains(search.lowercase()) }
-                    }
-                    PhotosScreenState.Ready(filteredCards)
-                }
+                PhotosScreenState.Ready(data.cards)
             }
         }
     }.stateIn(
@@ -59,7 +52,25 @@ class PhotosViewModelImpl @Inject constructor(
         PhotosScreenState.Loading
     )
 
-    private var currentPhotoRequest: Job? = null
+    @OptIn(FlowPreview::class)
+    val filteredCards = combine(
+        _dataState,
+        _searchState.debounce { 300 }.distinctUntilChanged()
+    ) { data, search ->
+        if (data is PhotoListResult.Success) {
+            if (search.isEmpty()) {
+                data.cards
+            } else {
+                withContext(Dispatchers.Default) {
+                    data.cards.filter { it.title.lowercase().contains(search.lowercase()) }
+                }
+            }
+        } else emptyList()
+    }.stateIn(
+        viewModelScope,
+        SharingStarted.WhileSubscribed(5000),
+        emptyList()
+    )
 
     init {
         requestPhotoList()
