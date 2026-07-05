@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.navigationevent:navigationevent-compose-android:1.0.0@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/9.6.1/transforms/462422dfaa9f5842a5c1ecd0c87da8b4/transformed/jetified-navigationevent-compose/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/9.6.1/transforms/462422dfaa9f5842a5c1ecd0c87da8b4/transformed/jetified-navigationevent-compose/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/9.6.1/transforms/09e5d0a07b13efd929f339a3c6120217/transformed/jetified-navigationevent-compose/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/9.6.1/transforms/09e5d0a07b13efd929f339a3c6120217/transformed/jetified-navigationevent-compose/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -26,9 +26,9 @@ X Loading state
             },
         ...
     X Parse response to PhotoCard
-    - Display list of PhotoCard
-- Description
-    - Ktor request to https://dummyjson.com/products?select=id,title,thumbnail
+    X Display list of PhotoCard
+X Title
+    X Ktor request to https://dummyjson.com/products?select=id,title,thumbnail
     - e.g. response
             {
               "products": [
@@ -38,8 +38,8 @@ X Loading state
                   "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
                 },
             ...
-    - Parse response to PhotoCard
-    - Display title in PhotoCard
+    X Parse response to PhotoCard
+    X Display title in PhotoCard
 - Search
     - Add search field to Photo screen
     - User can enter into text field

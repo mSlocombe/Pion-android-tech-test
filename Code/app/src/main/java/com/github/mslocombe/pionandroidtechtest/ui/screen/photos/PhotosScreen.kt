@@ -4,6 +4,7 @@ import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,6 +12,8 @@ import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -48,9 +51,12 @@ fun PhotosScreen(
             }
         },
         content = { scaffoldPadding ->
-            Box(Modifier
-                .fillMaxSize()
-                .padding(scaffoldPadding)) {
+            Box(
+                Modifier
+                    .fillMaxSize()
+                    .padding(scaffoldPadding)
+                    .padding(28.dp)
+            ) {
                 AnimatedContent(
                     modifier = Modifier
                         .align(Alignment.Center),
@@ -66,9 +72,16 @@ fun PhotosScreen(
                             // TODO Error state
                             Text("Error")
                         }
+
                         is PhotosScreenState.Ready -> {
-                            // TODO Ready state
-                            Text("Ready ${currentState.cards.size}")
+                            LazyColumn(
+                                Modifier.fillMaxSize(),
+                                verticalArrangement = Arrangement.spacedBy(15.dp)
+                            ) {
+                                items(currentState.cards) {
+                                    PhotoCard(it)
+                                }
+                            }
                         }
                     }
                 }

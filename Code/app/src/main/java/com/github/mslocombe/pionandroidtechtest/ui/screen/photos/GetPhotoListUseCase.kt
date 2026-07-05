@@ -24,7 +24,10 @@ class GetPhotoListUseCase @Inject constructor(
         }
 
         val cards = parsing.map {
-            PhotoCard(it.thumbnail)
+            PhotoCardState(
+                it.title,
+                it.thumbnail
+            )
         }
 
         PhotoListResult.Success(cards)
