@@ -8,6 +8,7 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import com.github.mslocombe.pionandroidtechtest.R
+import com.github.mslocombe.pionandroidtechtest.hilt.ProvideGetPhotoListUseCase
 import org.junit.Rule
 import org.junit.Test
 
@@ -18,10 +19,12 @@ class PhotosScreenTest {
 
     @Composable
     private fun TestPhotosScreen(
+        viewModel: PhotosViewModelImpl = PhotosViewModelImpl(ProvideGetPhotoListUseCase().provide()),
         onBack: () -> Unit = {}
     ) {
         PhotosScreen(
-            onBack
+            viewModel = viewModel,
+            onBack = onBack
         )
     }
 

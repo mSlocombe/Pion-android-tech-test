@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -59,6 +60,15 @@ fun PhotosScreen(
                     when (currentState) {
                         PhotosScreenState.Loading -> {
                             LoadingContent()
+                        }
+
+                        PhotosScreenState.Error -> {
+                            // TODO Error state
+                            Text("Error")
+                        }
+                        is PhotosScreenState.Ready -> {
+                            // TODO Ready state
+                            Text("Ready ${currentState.cards.size}")
                         }
                     }
                 }
