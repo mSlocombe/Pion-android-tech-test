@@ -41,7 +41,7 @@ fun LoginScreen(
 ) {
     Box(
         Modifier
-            .testTag("loginScreen")
+            .testTag("LoginScreen")
             .fillMaxSize()
             .imePadding()
             .padding(all = 48.dp)

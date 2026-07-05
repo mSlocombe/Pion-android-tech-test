@@ -27,7 +27,7 @@ class LoginScreenTest {
             LoginScreen()
         }
 
-        compose.onNodeWithTag("loginScreen").assertIsDisplayed()
+        compose.onNodeWithTag("LoginScreen").assertIsDisplayed()
     }
 
     @Test

@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.github.mslocombe.pionandroidtechtest.navigation.AppNavHost
+import com.github.mslocombe.pionandroidtechtest.navigation.Login
 import com.github.mslocombe.pionandroidtechtest.ui.theme.SBTechincalTestTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -15,7 +16,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SBTechincalTestTheme {
-                AppNavHost()
+                AppNavHost(Login)
             }
         }
     }
