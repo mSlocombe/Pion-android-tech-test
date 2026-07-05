@@ -12,8 +12,8 @@ X title
     X Add string resource
 
 -- Photos card
-- Loading state
-    - Circle indicator in middle of the screen
+X Loading state
+    X Circle indicator in middle of the screen
 - Image
     - Ktor request to https://dummyjson.com/products?select=id,title,thumbnail
         - e.g. response
