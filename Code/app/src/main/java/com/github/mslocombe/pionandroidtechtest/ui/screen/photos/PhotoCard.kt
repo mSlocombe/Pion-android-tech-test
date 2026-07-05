@@ -28,13 +28,14 @@ fun PhotoCard(
     Row(
         Modifier
             .fillMaxWidth()
+            .clip(RoundedCornerShape(8.dp))
             .background(MaterialTheme.colorScheme.tertiaryContainer)
     ) {
         AsyncImage(
             modifier = Modifier
                 .size(150.dp)
                 .clip(RoundedCornerShape(8.dp))
-                .background(Color(Random.nextInt())),
+                .background(state.background),
             model = state.thumbnail,
             contentDescription = null,
             contentScale = ContentScale.FillHeight
@@ -53,6 +54,10 @@ fun PhotoCard(
 @Composable
 private fun Preview_PhotoCard() {
     PhotoCard(
-        state = PhotoCardState("", "Placeholder text fdksld fjkdsjflsd kfdjrei iocedjc wncwipjcmk cnqwpiocjd ceomci ncewpc cniewpcanc nciewoceaw")
+        state = PhotoCardState(
+            "",
+            "Placeholder text fdksld fjkdsjflsd kfdjrei iocedjc wncwipjcmk cnqwpiocjd ceomci ncewpc cniewpcanc nciewoceaw",
+            background = Color(Random.nextInt())
+        )
     )
 }

@@ -1,6 +1,5 @@
 package com.github.mslocombe.pionandroidtechtest.network
 
-import android.util.Log
 import org.json.JSONException
 import org.json.JSONObject
 import javax.inject.Inject
@@ -12,25 +11,19 @@ class ProductParser @Inject constructor() {
 
     @Throws(JSONException::class)
     fun parse(input: String): List<Product> {
-        return try {
-            val rootObj = JSONObject(input)
-            val productsArray = rootObj.getJSONArray("products")
+        val rootObj = JSONObject(input)
+        val productsArray = rootObj.getJSONArray("products")
 
-            val products = mutableListOf<Product>()
-            for (index in 0..<productsArray.length()) {
-                val thisProduct = productsArray.getJSONObject(index)
-                val title = thisProduct.getString("title")
-                val thumbnail = thisProduct.getString("thumbnail")
-                products.add(
-                    Product(title, thumbnail)
-                )
-            }
-
-            products
-        } catch (e: JSONException) {
-            Log.e(TAG, "parse failed", e)
-            emptyList()
+        val products = mutableListOf<Product>()
+        for (index in 0..<productsArray.length()) {
+            val thisProduct = productsArray.getJSONObject(index)
+            val title = thisProduct.getString("title")
+            val thumbnail = thisProduct.getString("thumbnail")
+            products.add(
+                Product(title, thumbnail)
+            )
         }
 
+        return products
     }
 }

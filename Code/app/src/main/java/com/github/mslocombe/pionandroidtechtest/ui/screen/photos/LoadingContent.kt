@@ -1,9 +1,15 @@
 package com.github.mslocombe.pionandroidtechtest.ui.screen.photos
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 
 @Composable
 fun LoadingContent() {
-    CircularProgressIndicator()
+    Box(Modifier.fillMaxSize()) {
+        CircularProgressIndicator(Modifier.align(Alignment.Center))
+    }
 }
