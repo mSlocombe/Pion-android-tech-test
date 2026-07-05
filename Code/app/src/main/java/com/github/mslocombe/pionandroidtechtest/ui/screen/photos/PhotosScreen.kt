@@ -4,18 +4,12 @@ import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.imePadding
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -24,6 +18,9 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content.ErrorContent
+import com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content.LoadingContent
+import com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content.ReadyContent
 
 @Composable
 fun PhotosScreen(
@@ -35,13 +32,10 @@ fun PhotosScreen(
     Scaffold(
         modifier = Modifier
             .testTag("PhotosScreen")
-            .statusBarsPadding()
-            .navigationBarsPadding()
-            .imePadding()
             .fillMaxSize(),
         topBar = {
             // Box instead of a row to allow the title to be centered regardless of back button size
-            Box(Modifier.fillMaxWidth()) {
+            Box(Modifier.fillMaxWidth().systemBarsPadding()) {
                 BackButton(Modifier.align(Alignment.CenterStart)) { onBack() }
                 Title(
                     Modifier
@@ -55,33 +49,34 @@ fun PhotosScreen(
                 Modifier
                     .fillMaxSize()
                     .padding(scaffoldPadding)
-                    .padding(28.dp)
+                    .padding(horizontal = 28.dp)
             ) {
                 AnimatedContent(
                     modifier = Modifier
                         .align(Alignment.Center),
                     targetState = uiState,
-                    transitionSpec = { fadeIn() togetherWith fadeOut() }
+                    transitionSpec = { fadeIn() togetherWith fadeOut() },
+                    contentAlignment = Alignment.Center,
                 ) { currentState ->
                     when (currentState) {
                         PhotosScreenState.Loading -> {
                             LoadingContent()
                         }
 
-                        PhotosScreenState.Error -> {
-                            // TODO Error state
-                            Text("Error")
+                        is PhotosScreenState.Error -> {
+                            val retryEnabled by currentState.retryEnabled.collectAsStateWithLifecycle()
+
+                            ErrorContent(
+                                retryEnabled = retryEnabled,
+                                onRetry = {
+                                    currentState.disableRetryButton()
+                                    viewModel.retry()
+                                }
+                            )
                         }
 
                         is PhotosScreenState.Ready -> {
-                            LazyColumn(
-                                Modifier.fillMaxSize(),
-                                verticalArrangement = Arrangement.spacedBy(15.dp)
-                            ) {
-                                items(currentState.cards) {
-                                    PhotoCard(it)
-                                }
-                            }
+                            ReadyContent(currentState.cards)
                         }
                     }
                 }

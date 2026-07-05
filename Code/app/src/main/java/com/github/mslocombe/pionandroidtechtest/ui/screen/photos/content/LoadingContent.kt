@@ -1,4 +1,4 @@
-package com.github.mslocombe.pionandroidtechtest.ui.screen.photos
+package com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

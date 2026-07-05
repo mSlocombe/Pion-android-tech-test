@@ -9,4 +9,6 @@
     <string name="password_error">Password cannot be empty</string>
     <string name="back">Back</string>
     <string name="photos_title">Photos</string>
+    <string name="error_description">Something went wrong!</string>
+    <string name="retry">Retry</string>
 </resources>

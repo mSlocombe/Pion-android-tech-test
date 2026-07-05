@@ -1,5 +1,6 @@
 package com.github.mslocombe.pionandroidtechtest.network
 
+import org.json.JSONException
 import org.junit.Test
 
 class ProductParserTest {
@@ -42,7 +43,7 @@ class ProductParserTest {
         val result = parser.parse(testJson)
 
         assert(result == listOf(
-            Product("https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp")
+            Product("Essence Mascara Lash Princess","https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp")
         ))
     }
 
@@ -77,9 +78,9 @@ class ProductParserTest {
         val result = parser.parse(testJson)
 
         assert(result == listOf(
-            Product("https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"),
-            Product("https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp"),
-            Product("https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp")
+            Product("Essence Mascara Lash Princess", "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"),
+            Product("Eyeshadow Palette with Mirror", "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp"),
+            Product("Powder Canister", "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp")
         ))
     }
 
@@ -90,8 +91,13 @@ class ProductParserTest {
         """.trimIndent()
 
         val parser = ProductParser()
-        val result = parser.parse(testJson)
-
-        assert(result == emptyList<Product>())
+        try {
+            parser.parse(testJson)
+            assert(false) {
+                println("Expected JSONException")
+            }
+        } catch(ex: JSONException) {
+            assert(ex is JSONException)
+        }
     }
 }
