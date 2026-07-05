@@ -5,8 +5,10 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material3.Scaffold
@@ -15,9 +17,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.github.mslocombe.pionandroidtechtest.R
+import com.github.mslocombe.pionandroidtechtest.ui.component.OutlinedTextFieldThemed
 import com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content.ErrorContent
 import com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content.LoadingContent
 import com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content.ReadyContent
@@ -28,19 +33,35 @@ fun PhotosScreen(
     onBack: () -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val searchField by viewModel.searchState.collectAsStateWithLifecycle()
 
     Scaffold(
         modifier = Modifier
             .testTag("PhotosScreen")
-            .fillMaxSize(),
+            .fillMaxSize()
+            .imePadding(),
         topBar = {
             // Box instead of a row to allow the title to be centered regardless of back button size
-            Box(Modifier.fillMaxWidth().systemBarsPadding()) {
-                BackButton(Modifier.align(Alignment.CenterStart)) { onBack() }
-                Title(
-                    Modifier
-                        .align(Alignment.Center)
-                        .padding(horizontal = 24.dp)
+            Column(
+                Modifier
+                    .fillMaxWidth()
+                    .systemBarsPadding()
+            ) {
+                Box(Modifier.fillMaxWidth()) {
+                    BackButton(Modifier.align(Alignment.CenterStart)) { onBack() }
+                    Title(
+                        Modifier
+                            .align(Alignment.Center)
+                            .padding(horizontal = 24.dp)
+                    )
+                }
+                OutlinedTextFieldThemed(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 28.dp),
+                    label = stringResource(R.string.search),
+                    value = searchField,
+                    onValueChange = viewModel::updateSearch
                 )
             }
         },

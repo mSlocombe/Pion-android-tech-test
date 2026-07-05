@@ -32,6 +32,7 @@ class GetPhotoListUseCase @Inject constructor(
 
         val cards = parsing.map {
             PhotoCardState(
+                it.id,
                 it.title,
                 it.thumbnail,
                 Color(Random.nextInt())

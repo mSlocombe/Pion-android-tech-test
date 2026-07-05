@@ -3,6 +3,7 @@ package com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
@@ -18,8 +19,12 @@ fun ReadyContent(cards: List<PhotoCardState>) {
         verticalArrangement = Arrangement.spacedBy(15.dp),
         contentPadding = PaddingValues(bottom = 28.dp)
     ) {
-        items(cards) {
-            PhotoCard(it)
+        items(cards, key = { it.id }) {
+            PhotoCard(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .animateItem(), it
+            )
         }
     }
 }

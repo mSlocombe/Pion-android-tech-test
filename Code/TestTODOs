@@ -11,6 +11,7 @@ X back button
     X Add to screen
     X Can be clicked
     X Clicking navigates back
+
 X title
     X Add to screen
     X Add string resource
@@ -18,7 +19,8 @@ X title
 -- Photos card
 X Loading state
     X Circle indicator in middle of the screen
-- Image
+
+X Image
     X Ktor request to https://dummyjson.com/products?select=id,title,thumbnail
         - e.g. response
         {
@@ -31,6 +33,7 @@ X Loading state
         ...
     X Parse response to PhotoCard
     X Display list of PhotoCard
+
 X Title
     X Ktor request to https://dummyjson.com/products?select=id,title,thumbnail
     - e.g. response
@@ -44,8 +47,9 @@ X Title
             ...
     X Parse response to PhotoCard
     X Display title in PhotoCard
+
 - Search
-    - Add search field to Photo screen
-    - User can enter into text field
-    - Filter list of PhotoCard by title
-    - Display filtered list
+    X Add search field to Photo screen
+    X User can enter into text field
+    X Filter list of PhotoCard by title
+    X Display filtered list

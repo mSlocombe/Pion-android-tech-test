@@ -3,7 +3,6 @@ package com.github.mslocombe.pionandroidtechtest.ui.screen.photos
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -23,11 +22,11 @@ import kotlin.random.Random
 
 @Composable
 fun PhotoCard(
+    modifier: Modifier = Modifier,
     state: PhotoCardState
 ) {
     Row(
-        Modifier
-            .fillMaxWidth()
+        modifier
             .clip(RoundedCornerShape(8.dp))
             .background(MaterialTheme.colorScheme.tertiaryContainer)
     ) {
@@ -55,6 +54,7 @@ fun PhotoCard(
 private fun Preview_PhotoCard() {
     PhotoCard(
         state = PhotoCardState(
+            1,
             "",
             "Placeholder text fdksld fjkdsjflsd kfdjrei iocedjc wncwipjcmk cnqwpiocjd ceomci ncewpc cniewpcanc nciewoceaw",
             background = Color(Random.nextInt())

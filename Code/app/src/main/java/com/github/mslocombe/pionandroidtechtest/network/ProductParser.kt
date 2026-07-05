@@ -17,10 +17,11 @@ class ProductParser @Inject constructor() {
         val products = mutableListOf<Product>()
         for (index in 0..<productsArray.length()) {
             val thisProduct = productsArray.getJSONObject(index)
+            val id = thisProduct.getInt("id")
             val title = thisProduct.getString("title")
             val thumbnail = thisProduct.getString("thumbnail")
             products.add(
-                Product(title, thumbnail)
+                Product(id, title, thumbnail)
             )
         }
 

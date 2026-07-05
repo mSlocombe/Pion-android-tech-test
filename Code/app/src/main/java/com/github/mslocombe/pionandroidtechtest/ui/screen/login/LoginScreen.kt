@@ -13,8 +13,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -30,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.github.mslocombe.pionandroidtechtest.R
+import com.github.mslocombe.pionandroidtechtest.ui.component.OutlinedTextFieldThemed
 import com.github.mslocombe.pionandroidtechtest.ui.theme.SBTechincalTestTheme
 
 private const val TAG = "LoginScreen"
@@ -44,7 +43,7 @@ fun LoginScreen(
             .testTag("LoginScreen")
             .fillMaxSize()
             .safeContentPadding()
-            .padding(all = 48.dp)
+            .padding(bottom = 24.dp)
     ) {
         val uiState by viewModel.uiState.collectAsStateWithLifecycle()
         val loggedIn by viewModel.loginStatus.collectAsStateWithLifecycle()
@@ -99,26 +98,17 @@ private fun EmailField(
     state: LoginFieldState,
     onValueChanged: (String) -> Unit
 ) {
-    OutlinedTextField(
-        modifier = modifier,
+    OutlinedTextFieldThemed(
         value = state.text,
         onValueChange = onValueChanged,
-        label = {
-            Text(
-                stringResource(R.string.email),
-                style = MaterialTheme.typography.bodyMedium
-            )
-        },
-        isError = state.showError,
-        supportingText = { if (state.showError) Text(stringResource(R.string.email_error)) },
-        colors = OutlinedTextFieldDefaults.colors().copy(
-            unfocusedContainerColor = MaterialTheme.colorScheme.tertiaryContainer,
-            focusedContainerColor = MaterialTheme.colorScheme.tertiaryContainer
-        ),
-        maxLines = 1,
+        modifier = modifier,
+        label = stringResource(R.string.email),
+        showError = state.showError,
+        errorLabel = stringResource(R.string.email_error),
         keyboardOptions = KeyboardOptions(
             imeAction = ImeAction.Next
-        )
+        ),
+        maxLines = 1
     )
 }
 
@@ -128,23 +118,14 @@ private fun PasswordField(
     state: LoginFieldState,
     onValueChanged: (String) -> Unit
 ) {
-    OutlinedTextField(
+    OutlinedTextFieldThemed(
         modifier = modifier,
         value = state.text,
         onValueChange = onValueChanged,
         visualTransformation = PasswordVisualTransformation(),
-        label = {
-            Text(
-                stringResource(R.string.password),
-                style = MaterialTheme.typography.bodyMedium
-            )
-        },
-        isError = state.showError,
-        supportingText = { if (state.showError) Text(stringResource(R.string.password_error)) },
-        colors = OutlinedTextFieldDefaults.colors().copy(
-            unfocusedContainerColor = MaterialTheme.colorScheme.tertiaryContainer,
-            focusedContainerColor = MaterialTheme.colorScheme.tertiaryContainer
-        ),
+        label = stringResource(R.string.password),
+        showError = state.showError,
+        errorLabel = stringResource(R.string.password_error),
         maxLines = 1,
         keyboardOptions = KeyboardOptions(
             imeAction = ImeAction.Done
