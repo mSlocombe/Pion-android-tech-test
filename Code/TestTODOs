@@ -3,13 +3,13 @@ X Log in button clickable
 X Log in button navigates to Photos page
 
 -- Photos Top bar
-- back button
-    - Add to screen
-    - Can be clicked
-    - Clicking navigates back
-- title
-    - Add to screen
-    - Add string resource
+X back button
+    X Add to screen
+    X Can be clicked
+    X Clicking navigates back
+X title
+    X Add to screen
+    X Add string resource
 
 -- Photos card
 - Loading state
