@@ -1,0 +1,47 @@
+-- Login
+X Log in button clickable
+X Log in button navigates to Photos page
+
+-- Photos Top bar
+- back button
+    - Add to screen
+    - Can be clicked
+    - Clicking navigates back
+- title
+    - Add to screen
+    - Add string resource
+
+-- Photos card
+- Loading state
+    - Circle indicator in middle of the screen
+- Image
+    - Ktor request to https://dummyjson.com/products?select=id,title,thumbnail
+        - e.g. response
+        {
+          "products": [
+            {
+              "id": 1,
+              "title": "Essence Mascara Lash Princess",
+              "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
+            },
+        ...
+    - Parse response to PhotoCard
+    - Display list of PhotoCard
+- Description
+    - Ktor request to https://dummyjson.com/products?select=id,title,thumbnail
+    - e.g. response
+            {
+              "products": [
+                {
+                  "id": 1,
+                  "title": "Essence Mascara Lash Princess",
+                  "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
+                },
+            ...
+    - Parse response to PhotoCard
+    - Display title in PhotoCard
+- Search
+    - Add search field to Photo screen
+    - User can enter into text field
+    - Filter list of PhotoCard by title
+    - Display filtered list
