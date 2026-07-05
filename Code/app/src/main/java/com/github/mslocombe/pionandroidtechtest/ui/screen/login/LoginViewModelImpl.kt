@@ -32,7 +32,7 @@ class LoginViewModelImpl @Inject constructor() : LoginViewModel, ViewModel() {
         }
     }
 
-    override fun attemptLogin() {
+    override fun validateLogin() {
         val emailValid = _uiState.value.emailState.text.isNotEmpty()
         val passwordValid = _uiState.value.passwordState.text.isNotEmpty()
 

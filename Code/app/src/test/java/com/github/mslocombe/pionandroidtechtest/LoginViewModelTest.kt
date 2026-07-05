@@ -6,38 +6,38 @@ import org.junit.Test
 class LoginViewModelTest {
 
     @Test
-    fun emailShowsErrorAfterAttemptLoginWhenEmpty() {
+    fun emailShowsErrorAfterValidateLoginWhenEmpty() {
         val viewModel = LoginViewModelImpl()
 
         // No email set
-        viewModel.attemptLogin()
+        viewModel.validateLogin()
         assert(viewModel.uiState.value.emailState.showError)
     }
 
     @Test
-    fun emailDoesNotShowAfterAttemptLoginWhenEmpty() {
+    fun emailDoesNotShowAfterValidateLoginWhenEmpty() {
         val viewModel = LoginViewModelImpl()
         viewModel.updateEmail("ABC")
 
-        viewModel.attemptLogin()
+        viewModel.validateLogin()
         assert(!viewModel.uiState.value.emailState.showError)
     }
 
     @Test
-    fun passwordErrorAfterAttemptLoginWhenEmpty() {
+    fun passwordErrorAfterValidateLoginWhenEmpty() {
         val viewModel = LoginViewModelImpl()
 
         // No email set
-        viewModel.attemptLogin()
+        viewModel.validateLogin()
         assert(viewModel.uiState.value.passwordState.showError)
     }
 
     @Test
-    fun passwordDoesNotShowAfterAttemptLoginWhenEmpty() {
+    fun passwordDoesNotShowAfterValidateLoginWhenEmpty() {
         val viewModel = LoginViewModelImpl()
         viewModel.updatePassword("ABC")
 
-        viewModel.attemptLogin()
+        viewModel.validateLogin()
         assert(!viewModel.uiState.value.passwordState.showError)
     }
 
@@ -47,7 +47,7 @@ class LoginViewModelTest {
         viewModel.updateEmail("Set")
         viewModel.updatePassword("Set")
 
-        viewModel.attemptLogin()
+        viewModel.validateLogin()
 
         assert(viewModel.loginStatus.value == true)
     }

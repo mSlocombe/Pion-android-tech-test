@@ -36,7 +36,8 @@ private const val TAG = "LoginScreen"
 
 @Composable
 fun LoginScreen(
-    viewModel: LoginViewModel = hiltViewModel<LoginViewModelImpl>()
+    viewModel: LoginViewModel = hiltViewModel<LoginViewModelImpl>(),
+    navigateToPhotos: () -> Unit = {}
 ) {
     Box(
         Modifier
@@ -51,6 +52,7 @@ fun LoginScreen(
         LaunchedEffect(loggedIn) {
             if (loggedIn) {
                 Log.d(TAG, "Logged in")
+                navigateToPhotos()
             }
         }
 
@@ -85,7 +87,7 @@ fun LoginScreen(
                 )
             },
             onClick = {
-                viewModel.attemptLogin()
+                viewModel.validateLogin()
             }
         )
     }
@@ -154,6 +156,6 @@ private fun PasswordField(
 @Composable
 private fun Preview_LoginScreen() {
     SBTechincalTestTheme {
-        LoginScreen()
+        LoginScreen() {}
     }
 }

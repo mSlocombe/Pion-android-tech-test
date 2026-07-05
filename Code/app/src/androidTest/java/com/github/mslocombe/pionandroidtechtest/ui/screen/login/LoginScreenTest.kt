@@ -4,6 +4,7 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performClick
 import com.github.mslocombe.pionandroidtechtest.HiltTestActivity
 import com.github.mslocombe.pionandroidtechtest.R
 import dagger.hilt.android.testing.HiltAndroidRule
@@ -47,5 +48,27 @@ class LoginScreenTest {
 
         val label = compose.activity.getString(R.string.login_description)
         compose.onNodeWithText(label).assertIsDisplayed()
+    }
+
+    @Test
+    fun loginButtonClickLogsIn() {
+        var loggedIn = false
+        val viewModel = LoginViewModelImpl()
+        viewModel.updateEmail("ABC")
+        viewModel.updatePassword("ABC")
+
+        compose.setContent {
+            LoginScreen(viewModel) {
+                loggedIn = true
+            }
+        }
+
+        val label = compose.activity.getString(R.string.log_in)
+        compose.onNodeWithText(label).performClick()
+
+        // Allow LaunchedEffect to trigger
+        compose.waitForIdle()
+
+        assert(loggedIn)
     }
 }

@@ -9,5 +9,5 @@ interface LoginViewModel {
     fun updateEmail(newEmail: String)
     fun updatePassword(newPassword: String)
 
-    fun attemptLogin()
+    fun validateLogin()
 }
