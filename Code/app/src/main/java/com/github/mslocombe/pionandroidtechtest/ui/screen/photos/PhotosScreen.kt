@@ -17,12 +17,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.github.mslocombe.pionandroidtechtest.R
-import com.github.mslocombe.pionandroidtechtest.ui.component.OutlinedTextFieldThemed
 import com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content.ErrorContent
 import com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content.LoadingContent
 import com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content.ReadyContent
@@ -91,19 +88,12 @@ fun PhotosScreen(
                         is PhotosScreenState.Ready -> {
                             val results by viewModel.filteredCards.collectAsStateWithLifecycle()
 
-                            Column(Modifier.fillMaxSize()) {
-                                OutlinedTextFieldThemed(
-                                    modifier = Modifier
-                                        .fillMaxWidth(),
-                                    label = stringResource(R.string.search),
-                                    value = searchField,
-                                    onValueChange = viewModel::updateSearch
-                                )
-                                ReadyContent(
-                                    modifier = Modifier.weight(1f),
-                                    cards = results
-                                )
-                            }
+                            ReadyContent(
+                                modifier = Modifier.fillMaxSize(),
+                                searchValue = searchField,
+                                onSearchChanged = viewModel::updateSearch,
+                                cards = results
+                            )
                         }
                     }
                 }
