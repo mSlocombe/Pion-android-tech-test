@@ -1,0 +1,17 @@
+Login Screen
+- In order to complete this exercise in a reasonable time I have skipped a few testing scenarios.
+    - To fill the gaps, I would expect to include integration tests using mocks (libraries such as MockK or Mockito could be used)
+    - Further navigations test, such as Photos back to Login, and end to end using real implementations
+        up to a DummyEngine from Ktor.
+    - Screenshot testing could also be applied. However, this is still experimental and results can
+        very between machines.
+
+Photos Screen
+- I would like to expand this to create a responsive design for tablets, and foldables. We would accomplish
+    this through the use of WindowSizeClass which will be particularly important from Android 17+
+    - The most significant change in design would be to use a grid for larger screen size, reducing the
+        users need to scroll.
+
+- I would also look to move the search filtering over to the 'Ready' state holder (with more appropriate naming)
+    - I wanted to leave the current implementation as it showcases combining flows that would be responsive
+        to both the search, and product/photo data changing. Although in this case, the data never changes.

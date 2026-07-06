@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbfe00e1-8cd9-4344-b1ac-bc708d673b56" name="Default Changelist" comment="Photos Screen&#10;&#10;- Preview fixes">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotosScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/PhotosScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/content/ReadyContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/mslocombe/pionandroidtechtest/ui/screen/photos/content/ReadyContent.kt" afterDir="false" />
+    <list default="true" id="cbfe00e1-8cd9-4344-b1ac-bc708d673b56" name="Default Changelist" comment="Photos Screen&#10;&#10;- Preview fixes&#10;- Removed the search bar into ReadyContent for consistency.">
+      <change afterPath="$PROJECT_DIR$/future_considerations" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +23,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[PhysicalDevice::serial=RFCY70GQWCT]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[LocalEmulator::path=C:\Users\sloco\.android\avd\Pixel_10.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -171,46 +172,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Android App.app.executor": "Run",
-    "Android App.app2.executor": "Run",
-    "Android Instrumented Tests.All Tests.executor": "Run",
-    "Android Instrumented Tests.PhotosScreenTest.executor": "Run",
-    "Android Instrumented Tests.ProductParserTest.executor": "Run",
-    "Android Instrumented Tests.backButtonClickable().executor": "Run",
-    "Android Instrumented Tests.backButtonClicked().executor": "Run",
-    "Android Instrumented Tests.backButtonDisplayed().executor": "Run",
-    "Android Instrumented Tests.loginButtonClickable().executor": "Run",
-    "Android Instrumented Tests.photosBackNavigatesToLogin().executor": "Run",
-    "Android Instrumented Tests.responseContainsManyProducts().executor": "Run",
-    "Android Instrumented Tests.responseContainsOneProduct().executor": "Run",
-    "Android Instrumented Tests.titleDisplayed().executor": "Run",
-    "Gradle.Configure Daemon JVM Criteria.executor": "Run",
-    "Gradle.ProductClientTest.clientReceivesResponse.executor": "Run",
-    "Gradle.ProductParserTest.responseDoesNotContainAnyProducts.executor": "Run",
-    "Gradle.Tests in 'SBTechincalTest.app.unitTest'.executor": "Run",
-    "GradleDaemonJvmCriteriaMigrationNotification.isNotificationDisabled": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "ResourceManagerPrefKey.ModuleName": "SBTechincalTest.app.main",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "com.google.services.firebase.aqiPopupShown": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sloco/AndroidStudioProjects/Pion-android-tech-test/Code",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "sml.agent.feedback.1783175006129-48a08eae-0aaa-4ca0-9b4a-c7f9563fdb31": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;Android App.app2.executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.PhotosScreenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.ProductParserTest.executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.backButtonClickable().executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.backButtonClicked().executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.backButtonDisplayed().executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.loginButtonClickable().executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.photosBackNavigatesToLogin().executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.responseContainsManyProducts().executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.responseContainsOneProduct().executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.titleDisplayed().executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Configure Daemon JVM Criteria.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductClientTest.clientReceivesResponse.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductParserTest.responseDoesNotContainAnyProducts.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'SBTechincalTest.app.unitTest'.executor&quot;: &quot;Run&quot;,
+    &quot;GradleDaemonJvmCriteriaMigrationNotification.isNotificationDisabled&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;ResourceManagerPrefKey.ModuleName&quot;: &quot;SBTechincalTest.app.main&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sloco/AndroidStudioProjects/Pion-android-tech-test/Code&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;sml.agent.feedback.1783175006129-48a08eae-0aaa-4ca0-9b4a-c7f9563fdb31&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
       <recent name="com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content" />
@@ -743,7 +744,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783280443988</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Photos Screen&#10;&#10;- Preview fixes&#10;- Removed the search bar into ReadyContent for consistency.">
+      <option name="closed" value="true" />
+      <created>1783280765172</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1783280765172</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -801,7 +810,8 @@
     <MESSAGE value="Photos Screen&#10;&#10;- Added search field&#10;- Added id field to Product and PhotoCardState to use as the key for the lazyColumn&#10;- Created general OutlinedTextFieldThemed.kt for use on Login and Photos" />
     <MESSAGE value="Photos Screen&#10;&#10;- Search field moved to the results section so it doesn't appear while loading or after an error.&#10;&#10;- Increased the size of the error icon" />
     <MESSAGE value="Photos Screen&#10;&#10;- Preview fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Photos Screen&#10;&#10;- Preview fixes" />
+    <MESSAGE value="Photos Screen&#10;&#10;- Preview fixes&#10;- Removed the search bar into ReadyContent for consistency." />
+    <option name="LAST_COMMIT_MESSAGE" value="Photos Screen&#10;&#10;- Preview fixes&#10;- Removed the search bar into ReadyContent for consistency." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
