@@ -10,3 +10,4 @@ plugins {
 }
 rootProject.name='SBTechincalTest'
 include ':app'
+include ':app2'

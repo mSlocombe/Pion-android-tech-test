@@ -43,7 +43,7 @@ class ProductParserTest {
         val result = parser.parse(testJson)
 
         assert(result == listOf(
-            Product("Essence Mascara Lash Princess","https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp")
+            Product(1, "Essence Mascara Lash Princess","https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp")
         ))
     }
 
@@ -78,9 +78,9 @@ class ProductParserTest {
         val result = parser.parse(testJson)
 
         assert(result == listOf(
-            Product("Essence Mascara Lash Princess", "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"),
-            Product("Eyeshadow Palette with Mirror", "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp"),
-            Product("Powder Canister", "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp")
+            Product(1, "Essence Mascara Lash Princess", "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"),
+            Product(2, "Eyeshadow Palette with Mirror", "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp"),
+            Product(3, "Powder Canister", "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp")
         ))
     }
 
