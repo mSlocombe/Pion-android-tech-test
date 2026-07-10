@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-runtime-android:2.11.0@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/9.6.1/transforms/18cc89d33fbcacb7084cf9649508e733/transformed/jetified-lifecycle-runtime/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/9.6.1/transforms/18cc89d33fbcacb7084cf9649508e733/transformed/jetified-lifecycle-runtime/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/9.6.1/transforms/18cc89d33fbcacb7084cf9649508e733/transformed/jetified-lifecycle-runtime/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/9.6.1/transforms/b0d0528f0e6ab04fd12034b45fd53309/transformed/jetified-lifecycle-runtime/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/9.6.1/transforms/b0d0528f0e6ab04fd12034b45fd53309/transformed/jetified-lifecycle-runtime/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/9.6.1/transforms/b0d0528f0e6ab04fd12034b45fd53309/transformed/jetified-lifecycle-runtime/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

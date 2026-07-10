@@ -9,7 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.github.mslocombe.pionandroidtechtest.app2.ui.login.LoginScreen
+import com.github.mslocombe.pionandroidtechtest.app2.ui.navigation.AppNavHost
 import com.github.mslocombe.pionandroidtechtest.app2.ui.theme.SBTechincalTestTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
             SBTechincalTestTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Box(Modifier.padding(innerPadding)) {
-                        LoginScreen()
+                        AppNavHost()
                     }
                 }
             }

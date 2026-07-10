@@ -9,44 +9,17 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbfe00e1-8cd9-4344-b1ac-bc708d673b56" name="Default Changelist" comment="App2&#10;&#10;I feel like the initial app module was rushed, expecting it to need to be checked quickly.&#10;&#10;App2 is a 2nd attempt, where time and test pressure is off.&#10;&#10;LoginScreen&#10;- Added welcome title, description, email and password fields, and the login button with testing.">
-      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/androidTest/java/com/github/mslocombe/pionandroidtechtest/app2/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/androidTest/java/com/github/mslocombe/pionandroidtechtest/app2/HiltTestRunner.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/androidTest/java/com/github/mslocombe/pionandroidtechtest/app2/login/LoginScreenTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/debug/kotlin/com/github/mslocombe/pionandroidtechtest/HiltTestActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/App2Application.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/login/LoginScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/theme/Color.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/theme/Theme.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/theme/Type.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2/src/test/java/com/github/mslocombe/pionandroidtechtest/app2/ExampleUnitTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/androidTestResultsUserPreferences.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/androidTestResultsUserPreferences.xml" afterDir="false" />
+    <list default="true" id="cbfe00e1-8cd9-4344-b1ac-bc708d673b56" name="Default Changelist" comment="App2 - LoginScreen&#10;&#10;- Login field validation alongside Hilt and MockK testing&#10;- LoginStatus is set, but the UI doesn't react to it yet.">
+      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/inject/LoginValidatorModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/login/LoginFieldState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/login/LoginResult.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/login/LoginValidator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/login/LoginValidatorImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/login/LoginViewModelImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/navigation/NavGraph.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2/src/test/java/com/github/mslocombe/pionandroidtechtest/app2/ui/login/LoginValidatorTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2/src/test/java/com/github/mslocombe/pionandroidtechtest/app2/ui/login/LoginViewModelTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_13_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_13_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_compose_1_13_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_compose_1_13_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_ktx_1_13_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_ktx_1_13_0_aar.xml" afterDir="false" />
@@ -94,14 +67,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_dagger_dagger_lint_aar_2_60_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_dagger_dagger_lint_aar_2_60_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_dagger_hilt_android_2_60_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_dagger_hilt_android_2_60_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/github/mslocombe/pionandroidtechtest/network/ProductParserTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/github/mslocombe/pionandroidtechtest/network/ProductParserTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/debug/java/com/github/mslocombe/pionandroidtechtest/HiltTestActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/debug/java/com/github/mslocombe/pionandroidtechtest/HiltTestActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app2/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/login/LoginScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app2/src/main/java/com/github/mslocombe/pionandroidtechtest/app2/ui/login/LoginScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app2/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +83,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[LocalEmulator::path=C:\Users\sloco\.android\avd\Pixel_10.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[LocalEmulator::path=C:\Users\sloco\.android\avd\Resizable_Experimental.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -192,14 +164,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin File" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -223,7 +200,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="_Designer_Tab" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -287,6 +264,11 @@
     "Android Instrumented Tests.titleDisplayed().executor": "Run",
     "Android Instrumented Tests.welcomeMessageDisplays().executor": "Run",
     "Gradle.Configure Daemon JVM Criteria.executor": "Run",
+    "Gradle.LoginValidatorTest.emptyEmailReturnsEmailError.executor": "Run",
+    "Gradle.LoginValidatorTest.executor": "Run",
+    "Gradle.LoginViewModelTest.emailErrorStateWhenInvalid.executor": "Run",
+    "Gradle.LoginViewModelTest.executor": "Run",
+    "Gradle.LoginViewModelTest.successfulLoginTriggersLoginEvent.executor": "Run",
     "Gradle.ProductClientTest.clientReceivesResponse.executor": "Run",
     "Gradle.ProductParserTest.responseDoesNotContainAnyProducts.executor": "Run",
     "Gradle.Tests in 'SBTechincalTest.app.unitTest'.executor": "Run",
@@ -301,7 +283,8 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "take-two",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/sloco/AndroidStudioProjects/Pion-android-tech-test/Code",
     "project.structure.last.edited": "Modules",
@@ -316,13 +299,17 @@
       <recent name="com.github.mslocombe.pionandroidtechtest.app2" />
       <recent name="com.github.mslocombe.debug" />
     </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="com.github.mslocombe.pionandroidtechtest.app2.ui.login" />
+    </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="com.github.mslocombe.pionandroidtechtest.app2.ui.login" />
       <recent name="com.github.mslocombe.pionandroidtechtest.app2.com.github.mslocombe.pionandroidtechtest" />
       <recent name="com.github.mslocombe.pionandroidtechtest.ui.screen.photos.content" />
       <recent name="com.github.mslocombe.pionandroidtechtest.network" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.app2">
+  <component name="RunManager" selected="Android Instrumented Tests.All Tests (app2)">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -581,11 +568,11 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="canTypeInEmail()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginScreenTest" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
       <module name="SBTechincalTest.app2" />
       <option name="ANDROID_TEST_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="METHOD_NAME" value="canTypeInEmail" />
+      <option name="TESTING_TYPE" value="2" />
+      <option name="METHOD_NAME" value="" />
       <option name="CLASS_NAME" value="com.github.mslocombe.pionandroidtechtest.app2.login.LoginScreenTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_NAME_REGEX" value="" />
@@ -634,236 +621,130 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="canTypeInPassword()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
-      <module name="SBTechincalTest.app2" />
-      <option name="ANDROID_TEST_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="METHOD_NAME" value="canTypeInPassword" />
-      <option name="CLASS_NAME" value="com.github.mslocombe.pionandroidtechtest.app2.login.LoginScreenTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_NAME_REGEX" value="" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Hybrid>
-      <Java>
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Java>
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
-        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
-        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
-      </Profilers>
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+    <configuration name="LoginViewModelTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app2:testDebugUnitTest" />
+            <option value="--tests" />
+            <option value="&quot;com.github.mslocombe.pionandroidtechtest.app2.ui.login.LoginViewModelTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
     </configuration>
-    <configuration name="emailEmptyTextDisplaysWhenLoggingInWithEmptyEmail()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
-      <module name="SBTechincalTest.app2" />
-      <option name="ANDROID_TEST_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="METHOD_NAME" value="emailEmptyTextDisplaysWhenLoggingInWithEmptyEmail" />
-      <option name="CLASS_NAME" value="com.github.mslocombe.pionandroidtechtest.app2.login.LoginScreenTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_NAME_REGEX" value="" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Hybrid>
-      <Java>
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Java>
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
-        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
-        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
-      </Profilers>
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+    <configuration name="LoginViewModelTest.emailErrorStateWhenInvalid" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app2:testDebugUnitTest" />
+            <option value="--tests" />
+            <option value="&quot;com.github.mslocombe.pionandroidtechtest.app2.ui.login.LoginViewModelTest.emailErrorStateWhenInvalid&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
     </configuration>
-    <configuration name="loginButtonDisplays()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
-      <module name="SBTechincalTest.app2" />
-      <option name="ANDROID_TEST_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="METHOD_NAME" value="loginButtonDisplays" />
-      <option name="CLASS_NAME" value="com.github.mslocombe.pionandroidtechtest.app2.login.LoginScreenTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_NAME_REGEX" value="" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Hybrid>
-      <Java>
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Java>
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
-        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
-        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
-      </Profilers>
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+    <configuration name="LoginViewModelTest.successfulLoginTriggersLoginEvent" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app2:testDebugUnitTest" />
+            <option value="--tests" />
+            <option value="&quot;com.github.mslocombe.pionandroidtechtest.app2.ui.login.LoginViewModelTest.successfulLoginTriggersLoginEvent&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
     </configuration>
-    <configuration name="passwordFieldDisplays()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
-      <module name="SBTechincalTest.app2" />
-      <option name="ANDROID_TEST_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="METHOD_NAME" value="passwordFieldDisplays" />
-      <option name="CLASS_NAME" value="com.github.mslocombe.pionandroidtechtest.app2.login.LoginScreenTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_NAME_REGEX" value="" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Hybrid>
-      <Java>
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Java>
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
-        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
-        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
-      </Profilers>
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+    <configuration name="Tests in 'SBTechincalTest.app2.unitTest'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app2:testDebugUnitTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Android App.app" />
       <item itemvalue="Android App.app2" />
       <item itemvalue="Android App.app2.debug" />
       <item itemvalue="Android Instrumented Tests.All Tests (app2)" />
-      <item itemvalue="Android Instrumented Tests.canTypeInEmail()" />
-      <item itemvalue="Android Instrumented Tests.canTypeInPassword()" />
-      <item itemvalue="Android Instrumented Tests.emailEmptyTextDisplaysWhenLoggingInWithEmptyEmail()" />
-      <item itemvalue="Android Instrumented Tests.loginButtonDisplays()" />
-      <item itemvalue="Android Instrumented Tests.passwordFieldDisplays()" />
+      <item itemvalue="Android Instrumented Tests.LoginScreenTest" />
+      <item itemvalue="Gradle.LoginViewModelTest" />
+      <item itemvalue="Gradle.LoginViewModelTest.emailErrorStateWhenInvalid" />
+      <item itemvalue="Gradle.LoginViewModelTest.successfulLoginTriggersLoginEvent" />
+      <item itemvalue="Gradle.Tests in 'SBTechincalTest.app2.unitTest'" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Android Instrumented Tests.emailEmptyTextDisplaysWhenLoggingInWithEmptyEmail()" />
-        <item itemvalue="Android Instrumented Tests.loginButtonDisplays()" />
-        <item itemvalue="Android Instrumented Tests.canTypeInPassword()" />
-        <item itemvalue="Android Instrumented Tests.passwordFieldDisplays()" />
-        <item itemvalue="Android Instrumented Tests.canTypeInEmail()" />
+        <item itemvalue="Gradle.Tests in 'SBTechincalTest.app2.unitTest'" />
+        <item itemvalue="Gradle.LoginViewModelTest.successfulLoginTriggersLoginEvent" />
+        <item itemvalue="Gradle.LoginViewModelTest" />
+        <item itemvalue="Gradle.LoginViewModelTest.emailErrorStateWhenInvalid" />
+        <item itemvalue="Android Instrumented Tests.LoginScreenTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1022,7 +903,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783354005586</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="App2&#10;&#10;I feel like the initial app module was rushed, expecting it to need to be checked quickly.&#10;&#10;App2 is a 2nd attempt, where time and test pressure is off.&#10;&#10;LoginScreen&#10;- Added welcome title, description, email and password fields, and the login button with testing.">
+      <option name="closed" value="true" />
+      <created>1783692130057</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1783692130057</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1083,7 +972,8 @@
     <MESSAGE value="Photos Screen&#10;&#10;- Preview fixes&#10;- Removed the search bar into ReadyContent for consistency." />
     <MESSAGE value="Final Thoughts&#10;&#10;- Added future_considerations to explain where I would go from here to improve the task." />
     <MESSAGE value="App2&#10;&#10;I feel like the initial app module was rushed, expecting it to need to be checked quickly.&#10;&#10;App2 is a 2nd attempt, where time and test pressure is off.&#10;&#10;LoginScreen&#10;- Added welcome title, description, email and password fields, and the login button with testing." />
-    <option name="LAST_COMMIT_MESSAGE" value="App2&#10;&#10;I feel like the initial app module was rushed, expecting it to need to be checked quickly.&#10;&#10;App2 is a 2nd attempt, where time and test pressure is off.&#10;&#10;LoginScreen&#10;- Added welcome title, description, email and password fields, and the login button with testing." />
+    <MESSAGE value="App2 - LoginScreen&#10;&#10;- Login field validation alongside Hilt and MockK testing&#10;- LoginStatus is set, but the UI doesn't react to it yet." />
+    <option name="LAST_COMMIT_MESSAGE" value="App2 - LoginScreen&#10;&#10;- Login field validation alongside Hilt and MockK testing&#10;- LoginStatus is set, but the UI doesn't react to it yet." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
