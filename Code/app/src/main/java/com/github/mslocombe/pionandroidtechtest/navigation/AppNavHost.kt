@@ -2,6 +2,7 @@ package com.github.mslocombe.pionandroidtechtest.navigation
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -9,8 +10,10 @@ import com.github.mslocombe.pionandroidtechtest.ui.screen.login.LoginScreen
 import com.github.mslocombe.pionandroidtechtest.ui.screen.photos.PhotosScreen
 
 @Composable
-fun AppNavHost(startDestination: Route) {
-    val navController = rememberNavController()
+fun AppNavHost(
+    navController: NavHostController = rememberNavController(),
+    startDestination: Route
+) {
     NavHost(
         navController = navController,
         startDestination = startDestination
